@@ -1,0 +1,4 @@
+[submodule "go-spacemesh"]
+	path = go-spacemesh
+	url = https://github.com/spacemeshos/go-spacemesh.git
+	branch = hackathon
