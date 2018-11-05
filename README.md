@@ -1,6 +1,6 @@
 # Liberthon
 
-## Liberthon Hackathon branch
+## Liberthon Hackathon
 Welcome to the Liberthon Hackathon toolset created especially to provide you with P2P capabilities 
 
 ### <b>Quickstrat: Running Spacemesh P2P client</b>
@@ -9,9 +9,13 @@ You can deploy the P2P client in two ways:
 - Build or use Spacemesh Docker image
 
 ### Building spacemesh agent
+Pre requisites: install the go framework
 ```
-git clone 
-
+go get github.com/spacemeshos/go-spacemesh
+cd ~/go/src/github/spacemeshos/go-spacemesh
+git checkout -b hackathon
+go build
+```
 ### Using Spacemsh P2P
 Whether you are running the agent via Docker or Executable, This is how you can communicate and use the agent to build a P2P network.
 
