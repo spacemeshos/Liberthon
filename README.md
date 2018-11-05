@@ -1,7 +1,7 @@
 # Liberthon
 
 ## Liberthon Hackathon branch
-Welcome to the Liberthon Hackathon tag built especially to provide you with P2P capabilities 
+Welcome to the Liberthon Hackathon toolset created especially to provide you with P2P capabilities 
 
 ### <b>Quickstrat: Running Spacemesh P2P client</b>
 You can deploy the P2P client in two ways:
