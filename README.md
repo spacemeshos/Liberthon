@@ -67,3 +67,11 @@ curl -X POST -d '{ "protocolName": "anton", "payload" : [0,10,10,10] }' 127.0.0.
 ```
 - `protocolName`: protocol name that will be sent, receiveing clients will route the message according to this name
 - `payload`: the payload (in bytes) that contains your application specific data.
+
+## Using the python `devnet` script
+the devnet is a simple python script used to spin up local docker containers to simulate a network.
+settings like size of the network and amount of connections each node holds are determined in the script code before running.
+
+`python devnet.py`
+
+This script tests a simple message broadcast but it can be extended to test much more than that.
