@@ -20,7 +20,7 @@ tools.cleanUp(client.containers.list())
 
 time.sleep(1)
 print "Creating bootstrap container"
-bootstrap = client.containers.run("spacemesh_p2p:latest", detach=True, ports={9090:9999}, environment={"BOOTPARAMS": "--gossip --randcon 3 --bucketsize 100"})
+bootstrap = client.containers.run("spaceanton/spacemesh:spacemesh_p2p", detach=True, ports={9090:9999}, environment={"BOOTPARAMS": "--gossip --randcon 3 --bucketsize 100"})
 print "Waiting for node to boot up"
 tools.waitForRPC(bootstrap)
 tools.registerProtocol(advclient, bootstrap, "gossip_test", 8081)
@@ -42,7 +42,7 @@ contlist = []
 
 def createNodes(netsize, bootIP, bootID):
     for i in range(netsize):
-        node = client.containers.run("spacemesh_p2p:latest", detach=True, ports={"9090": None}, environment={"BOOTPARAMS": "--bootstrap --gossip --randcon " + str(randcon) + " --bucketsize 20 --bootnodes \"" + bootIP + ":7513/" + bootID + "\""})
+        node = client.containers.run("spaceanton/spacemesh:spacemesh_p2p", detach=True, ports={"9090": None}, environment={"BOOTPARAMS": "--bootstrap --gossip --randcon " + str(randcon) + " --bucketsize 20 --bootnodes \"" + bootIP + ":7513/" + bootID + "\""})
         contlist.append({"cont": node})
         idxes[node.name] = i
 
