@@ -21,7 +21,7 @@ Whether you are running the agent via Docker or Executable, This is how you can 
 
 In order for us to setup a P2P network we must first boot up a bootstrap node, This node will be one of the first nodes any client will connect to and allow nodes to discover new nodes in the network. to boot up a bootstrap node use:
 ```
-./spacemesh
+./go-spacemesh
 ```
 After a bootstrap node has been created, the other nodes can be booted and configured to connect to it.
 To specify a bootstrap when booting more nodes use the following command:
